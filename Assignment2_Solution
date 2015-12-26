@@ -1,3 +1,17 @@
+#makeCacheMatrix function creates an object that is an envioronment whose purpose is to store the
+# inverse of a matrix that the user supplies
+#makeCacheMatrix also returns a list with four functions that can be used to access/edit the supplied
+# matrix and inverse
+#Functions returned in the list are
+#       set = user can enter a matrix and the stored matrix will be updated, function takes a matrix variable
+#       get = user can return the stored matrix, function takes no variables
+#       setinverse = user can enter an inverse matrix (not recommended, instead use the companion
+#        function, cacheSolve.R to calculate the inverse matrix)
+#       getinverse = user can return the stored inverse matrix, function takes no variables
+
+
+
+
 
 
 makeCacheMatrix <- function( m = matrix() ) {
@@ -31,6 +45,11 @@ i
 
 list(set = set, get = get, setInverse = setInverse, getInverse = getInverse)
 }
+
+
+
+
+# the following returns a matrix of the inverse of 'x'
 
 cacheSolve <- function(x, ...) {
 
